@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: nsoor
-        image: gcr.io/spectral-153422/nsoor:1
+        image: gcr.io/spectral-153422/nsoor:[DOCKER_TAG]
         ports:
           - containerPort: 80
 
