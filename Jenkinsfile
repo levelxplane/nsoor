@@ -2,7 +2,7 @@ pipeline {
 
     agent {
         docker {
-            image 'node:boron'
+            image 'node:argon'
             args '-u root'
         }
     }
