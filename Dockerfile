@@ -1,5 +1,9 @@
-FROM nginx
+FROM node:argon
 
-COPY default.conf /etc/nginx/conf.d/default.conf
-COPY public /srv/public
-# nsoor:jan312018c
+COPY . /srv/nsoor
+
+EXPOSE 8080
+
+WORKDIR /srv/nsoor
+RUN npm install
+CMD node app.js

@@ -1,17 +1,12 @@
 pipeline {
 
-    agent {
-        docker {
-            image 'node:argon'
-            args '-u root'
-        }
-    }
+    agent { dockerfile true}
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'docker build -f Dockerfile.node -t gcr.io/spectral-153422/nsoor:test'
+                sh 'npm -v'
             }
         }
         stage('Test') {
