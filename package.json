@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "sh test.sh"
   },
   "repository": {
     "type": "git",
