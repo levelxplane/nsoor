@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+                sh 'docker build -f Dockerfile.node -t gcr.io/spectral-153422/nsoor:test'
             }
         }
         stage('Test') {
