@@ -1,10 +1,17 @@
 pipeline {
 
+    agent {
+        docker {
+            image 'node:argon'
+            args '-u root'
+        }
+    }
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'echo lol'
+                sh 'npm install'
             }
         }
         stage('Test') {
