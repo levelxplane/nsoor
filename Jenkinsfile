@@ -1,23 +1,16 @@
 pipeline {
-
-    agent {
-        dockerfile {
-            additionalBuildArgs '-t gcr.io/spectral-153422/nsoor:test'
-        }
-    }
-
+    agent None
     stages {
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                sh 'npm test'
+        stage("Docker Build") {
+            agent {
+                dockerfile{
+                  filename 'Dockerfile'
+                  buildAdditionalArgs '-t gcr.io/spectral-153422/nsoor:test'
+                }
             }
         }
-        stage('Push'){
-          steps{
-            echo 'Pushing'
-            whoami
-          }
+        stage("IDK"){
+            sh("cat LOL")
         }
     }
 }
