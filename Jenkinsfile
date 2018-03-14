@@ -1,16 +1,6 @@
-pipeline {
-    agent none
-    stages {
-        stage("Docker Build") {
-            agent {
-                dockerfile{
-                  filename 'Dockerfile'
-                  buildAdditionalArgs '-t gcr.io/spectral-153422/nsoor:test'
-                }
-            }
-        }
-        stage("IDK"){
-            sh("cat LOL")
-        }
+node {
+    def app
+    stage("Build image") {
+        app = docker.build("gcr.io/spectral-153422/nsoor:test")
     }
 }
