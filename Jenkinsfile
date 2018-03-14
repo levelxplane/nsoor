@@ -17,7 +17,6 @@ pipeline {
           steps{
             echo 'Pushing'
             whoami
-            # sh("gcloud docker -- push gcr.io/spectral-153422/nsoor:test")
           }
         }
     }
