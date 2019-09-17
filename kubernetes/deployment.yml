@@ -11,9 +11,9 @@ spec:
     spec:
       containers:
       - name: nsoor
-        image: gcr.io/spectral-153422/nsoor:[DOCKER_TAG]
+        image: 110723603615.dkr.ecr.us-east-1.amazonaws.com/nsoor:latest
         ports:
-          - containerPort: 80
+          - containerPort: 8080
 
         # volumeMounts:
         # - name: vmfs-vmdk-storage

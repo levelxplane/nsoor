@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node:12
 
 COPY . /srv/nsoor
 
