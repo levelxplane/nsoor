@@ -27,7 +27,8 @@ app.get('/time', function(req, res) {
       "hour": date.getHours(),
       "minutes": date.getMinutes(),
       "seconds": date.getSeconds(),
-      "full": date
+      "full": date,
+      "version": process.env.VERSION
     }
     res.send(JSON.stringify(timeObject));
 });

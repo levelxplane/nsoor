@@ -1,0 +1,10 @@
+FROM node:12
+
+COPY . /srv/nsoor
+
+EXPOSE 8080
+ENV VERSION v2
+
+WORKDIR /srv/nsoor
+RUN npm install
+CMD node app.js
