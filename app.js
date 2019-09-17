@@ -20,4 +20,16 @@ app.get('/github', function(req, res) {
     res.redirect('https://github.com/levelxplane/');
 });
 
-app.listen(8080, () => console.log('Example app listening on port 8080!'));
+app.get('/time', function(req, res) {
+    var date = new Date();
+
+    var timeObject = {
+      "hour": date.getHours(),
+      "minutes": date.getMinutes(),
+      "seconds": date.getSeconds(),
+      "full": date
+    }
+    res.send(JSON.stringify(timeObject));
+});
+
+app.listen(8080, () => console.log('App listening on port 8080!'));
