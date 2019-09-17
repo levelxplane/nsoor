@@ -11,7 +11,7 @@ var results = {
     success: 0,
     failure: 0,
     avg_ttlb: 0,
-    version: 'v1'
+    version: 'v0'
 }
 
 const failure = () => {
