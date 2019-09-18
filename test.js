@@ -28,7 +28,7 @@ const success = (new_ttlb, version) => {
     }
     results.success += 1;
     results.avg_ttlb = new_avg;
-    results.version = version
+    results.version = version;
 }
 
 const interval = setInterval(() => {
