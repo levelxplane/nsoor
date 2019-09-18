@@ -15,5 +15,5 @@ node app.js
 
 # test to measure response time and failure rate
 # runs against http://nsoor.net/time
-node test.js
+node test.js <# of requests per second>
 ```
