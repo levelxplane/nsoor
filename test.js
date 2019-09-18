@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-const request_count = process.argv[2];
+const request_count = process.argv[2] || 1;
 
 var url = {url: 'http://nsoor.net/time', time: true}
 
